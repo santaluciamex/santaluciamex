@@ -1,60 +1,156 @@
-<!DOCTYPE html>
-<html lang="es">
+/* css/styles.css */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistencia Integral Santa Lucía</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
-    <header>
-        <img src="imagenes/nuevo_logo.png" alt="Logo">
-        <h1>Asistencia Integral Santa Lucía</h1>
-        <a class="boton" href="https://wa.me/5215512345678" target="_blank">Contactar por WhatsApp</a>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#quienes-somos">Quiénes Somos</a>
-    </nav>
+/* Container centrado */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
-    <section id="quienes-somos" class="seccion">
-        <h2>Quiénes Somos</h2>
-        <p>En Asistencia Integral Santa Lucía somos una empresa dedicada a brindar soluciones viales con rapidez, seguridad y profesionalismo. Nuestro equipo está conformado por expertos comprometidos con ayudarte en momentos de emergencia, ofreciendo un servicio confiable y de alta calidad. Tu seguridad es nuestra prioridad.</p>
-    </section>
+/* Header */
+header {
+    background-color: #4B4B4B;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
 
-    <section id="servicios" class="seccion">
-        <h2>Servicios</h2>
+header img {
+    width: 120px;
+    margin-bottom: 10px;
+}
 
-        <article>
-            <h3>Cambio de Llanta</h3>
-            <img src="imagenes/cambio_llanta.jpg" alt="Cambio de Llanta">
-        </article>
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
 
-        <article>
-            <h3>Paso de Corriente</h3>
-            <img src="imagenes/paso_corriente.jpg" alt="Paso de Corriente">
-        </article>
+/* Botón WhatsApp */
+.boton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+    transition: background-color 0.3s;
+}
 
-        <article>
-            <h3>Suministro de Gasolina</h3>
-            <img src="imagenes/suministro_gasolina.jpg" alt="Suministro de Gasolina">
-        </article>
+.boton:hover {
+    background-color: #1ebe5d;
+}
 
-        <article>
-            <h3>Cerrajero Automotriz</h3>
-            <img src="imagenes/cerrajero.jpg" alt="Cerrajero Automotriz">
-        </article>
-    </section>
+/* Animación latido */
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
 
-    <footer id="contacto">
-        <p>Contacto: 55-1234-5678 | asistencia.santalucia@gmail.com</p>
-        <p>&copy; 2025 Asistencia Integral Santa Lucía</p>
-    </footer>
-</body>
+/* Navegación */
+nav {
+    background-color: #5a2600;
+    text-align: center;
+    padding: 10px 0;
+}
 
-</html>
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/* Secciones */
+section.seccion {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+section.seccion h2 {
+    font-size: 2rem;
+    color: #a14600;
+    margin-bottom: 20px;
+}
+
+section.seccion p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+}
+
+/* Servicios */
+section.services {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+section.services h2 {
+    text-align: center;
+    color: #a14600;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.services article {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 40px);
+    margin: 0 20px 40px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.services article img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.services article h3 {
+    padding: 15px;
+    color: #a14600;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #a14600;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
