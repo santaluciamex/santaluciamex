@@ -1,0 +1,1 @@
+console.log("Asistencia Integral Santa Lucía activo");
